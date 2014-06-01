@@ -17,9 +17,13 @@
                 margin: 0 auto;
                 box-sizing: border-box;
             }
+            .clearfix{
+                content: "";
+                display: table;
+            }
             header, section, footer{
                 width:  100%;
-                background: #fff;
+                background: grey;
                 border:  1px solid black;
                 margin: 15px auto;
                 border-radius: 5px;
@@ -28,7 +32,6 @@
             }
             header{
                 height:  100px;
-                background-color: grey;
                 position: relative;
                 overflow: hidden;
             }
@@ -42,7 +45,6 @@
                 
                 border:  1px solid black;
                 border-radius: 5px;
-
                 height:  30px;
                 background: #000;
                 vertical-align: central;
@@ -62,30 +64,87 @@
                 position: relative;
                 width: 225px;
                 margin: 35px 60px 0px 0px;
+                padding-top: 7px;
             }
-            #right_color{
-                position: abolute;
+            #menu_right_color{
                 background-color: blue;
                 width: 1000%;
                 height: 100px;
                 margin-left: 450px;
             }
-            .clearfix{
-                content: "";
-                display: table;
+            #left, #right{
+                width: 50%;
+                box-sizing: border-box;
+                height:  100%;
+                background: grey;
             }
-            
+            #left{
+                float: left;
+            }
+            #right{
+                float:  right;
+                padding: 10px;
+             }
+            #text{
+                overflow: hidden;
+                border-left: 1px solid black;
+                height:  100%;
+                padding-left: 20px;
+            }
+            .info{
+                width: 350px;
+                height: 40px;
+                padding-top: 17px;
+                text-align: center;
+                background: blue;
+                color: #fff;
+                box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, .75);
+                border-radius: 10px;
+                margin: 10px auto;
+                margin-top: 30px;
+            }
+            .contact{
+                width:  90%;
+                margin: 10 auto;
+                margin-top: 40px;
+                border:  1px solid black;
+            }
         </style>
     </head>
     <body>
         <div class="center_width">
             <header id="header" class="clearfix">
                 <div id="logo">Tech Support</div><!-- /end logo -->
-                <div id="menu"><a href=#>Home</a><a href=#>Pricing</a><a href=#>About</a></div><!-- /end menu -->
-                <div id="right_color"></div><!-- /end right_color -->
+                <div id="menu"><a href="#">Home</a><a href="#">Pricing</a><a href="#">About</a></div><!-- /end menu -->
+                <div id="menu_right_color"></div><!-- /end right_color -->
             </header>
-            <section id="section"></section>
-            <footer id="footer"></footer>
+            <section id="section">
+                <div id="left">
+                    <div class="info">
+                        Info Spot 1
+                    </div>
+                    <div class="info">
+                        Info Spot 2
+                    </div>
+                    <div class="info">
+                        Go To Assist
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque adipiscing sapien sed metus dignissim, non laoreet nisl commodo. Pellentesque hendrerit est est, sit amet tempus orci scelerisque ut. Vivamus blandit nunc sed elit porttitor vestibulum. Cras a arcu sapien. Integer id metus at est euismod dignissim ac ut felis. Mauris fermentum vel ipsum eu ornare. Sed vel nibh ac lacus pretium faucibus et sed mi. Morbi congue, tortor non adipiscing malesuada, mi urna vehicula nisl, nec varius dolor nisi ac neque. Vivamus nec ipsum ornare, laoreet neque et, fringilla mauris. Phasellus nulla diam, consequat ut lectus sit amet, mollis ullamcorper enim. Fusce lobortis sodales varius. Donec massa magna, auctor aliquam viverra nec, volutpat vel mi. Ut eget semper urna. Nam porta ut sapien vel suscipit. Proin accumsan erat ligula, nec euismod risus condimentum quis.
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <div class="contact">
+                    <div>Contact:</div>
+                    <div><a href="#">Write us an Email</a></div>
+                    <div>Phone: (000) 000 0000</div>
+                    <div></div>
+                    <p>© Copyright 2014  |   Bryan's Company, All rights reserved<br><small>made by <span class="text-white"><a href="http://www.winterswebs.com">WintersWebs.com</a></span></p>
+                </div>
+            </footer>
         </div>
 
     </body>
