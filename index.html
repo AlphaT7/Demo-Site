@@ -41,7 +41,7 @@
             footer{
                 height: 200px;
             }
-            #logo, #menu{
+            .logo, #menu{
                 
                 border:  1px solid black;
                 border-radius: 5px;
@@ -54,11 +54,12 @@
             #menu a{
                 margin: 10px;
             }
-            #logo{
+            .logo{
                 float: left;
                 width: 150px;
                 margin: 30px 0px 0px 40px;
                 padding-top: 7px;
+                box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, .75);
             }
             #menu{
                 float: right;
@@ -66,6 +67,7 @@
                 width: 225px;
                 margin: 30px 60px 0px 0px;
                 padding-top: 7px;
+                background: grey;
             }
             #menu_right_color{
                 background-color: blue;
@@ -104,18 +106,43 @@
                 margin: 10px auto;
                 margin-top: 30px;
             }
+            .footer_left, .footer_right{
+                width: 50%;
+                box-sizing: border-box;
+                height:  100%;
+            }
+            .footer_left{
+                float: left;
+            }
+            .footer_right{
+                float:  right;
+                padding: 10px;
+             }
+            .footer_left p{
+                text-align: center;
+            }
             .contact{
-                width:  90%;
-                margin: 10 auto;
-                margin-top: 40px;
-                border:  1px solid black;
+                height:  100%;
+                margin: 0px auto;
+                border-left: 1px solid black;
+                padding: 0px 0px 0px 20px;
+            }
+            #contact_info{
+                margin-top: 25px;
+                border: 1px dashed black;
+                position:  absolute;
+                padding:  15px;
+                width:  300px;
+            }
+            .footer_left .logo{
+                margin: 50px 0px 0px 125px;
             }
         </style>
     </head>
     <body>
         <div class="center_width">
             <header id="header" class="clearfix">
-                <div id="logo">Tech Support</div><!-- /end logo -->
+                <div class="logo">Tech Support</div><!-- /end logo -->
                 <div id="menu"><a href="#">Home</a><a href="#">Pricing</a><a href="#">About</a></div><!-- /end menu -->
                 <div id="menu_right_color"></div><!-- /end right_color -->
             </header>
@@ -133,17 +160,24 @@
                 </div>
                 <div id="right">
                     <div id="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque adipiscing sapien sed metus dignissim, non laoreet nisl commodo. Pellentesque hendrerit est est, sit amet tempus orci scelerisque ut. Vivamus blandit nunc sed elit porttitor vestibulum. Cras a arcu sapien. Integer id metus at est euismod dignissim ac ut felis. Mauris fermentum vel ipsum eu ornare. Sed vel nibh ac lacus pretium faucibus et sed mi. Morbi congue, tortor non adipiscing malesuada, mi urna vehicula nisl, nec varius dolor nisi ac neque. Vivamus nec ipsum ornare, laoreet neque et, fringilla mauris. Phasellus nulla diam, consequat ut lectus sit amet, mollis ullamcorper enim. Fusce lobortis sodales varius. Donec massa magna, auctor aliquam viverra nec, volutpat vel mi. Ut eget semper urna. Nam porta ut sapien vel suscipit. Proin accumsan erat ligula, nec euismod risus condimentum quis.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque adipiscing sapien sed metus dignissim, non laoreet nisl commodo. Pellentesque hendrerit est est, sit amet tempus orci scelerisque ut. Vivamus blandit nunc sed elit porttitor vestibulum. Cras a arcu sapien. Integer id metus at est euismod dignissim ac ut felis. Mauris fermentum vel ipsum eu ornare. Sed vel nibh ac lacus pretium faucibus et sed mi. Morbi congue, tortor non adipiscing malesuada, mi urna vehicula nisl, nec varius dolor nisi ac neque. Vivamus nec ipsum ornare, laoreet neque et, fringilla mauris. Phasellus nulla diam, consequat ut lectus sit amet, mollis ullamcorper enim. Fusce lobortis sodales varius. Donec massa magna, auctor aliquam viverra nec, volutpat vel mi. Ut eget semper urna. Nam porta ut sapien vel suscipit. Proin accumsan erat ligula, nec euismod risus condimentum quis.
                     </div>
                 </div>
             </section>
             <footer id="footer">
-                <div class="contact">
-                    <div>Contact:</div>
-                    <div><a href="#">Write us an Email</a></div>
-                    <div>Phone: (000) 000 0000</div>
-                    <div></div>
-                    <p>© Copyright 2014  |   Bryan's Company, All rights reserved<br><small>made by <span class="text-white"><a href="http://www.winterswebs.com">WintersWebs.com</a></span></p>
+                <div class="footer_left">
+                    <div class="logo">Tech Support</div><br><br><br><br><br><br>
+                    <p>© Copyright 2014  |  Bryan's Company, All rights reserved<br><small>made by</small><span class="text-white"><a href="http://www.winterswebs.com">WintersWebs.com</a></span></p>
+                </div>
+                
+                <div class="footer_right">
+                    <div class="contact">
+                        <div id="contact_info">
+                            <div>Contact Us:</div><br>
+                            <div>Email: <a href="#">Email Address Here</a></div>
+                            <div>Phone: (000) 000 0000</div>
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
